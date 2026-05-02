@@ -43,76 +43,95 @@
 }
 
 :root {
-  /* Victorian Romanticism Color Palette */
-  --primary: #5C3D3D;
-  --primary-foreground: #FAF8F3;
-  --sidebar-primary: #5C3D3D;
-  --sidebar-primary-foreground: #FAF8F3;
-  --chart-1: #E8D5CC;
-  --chart-2: #D4AF37;
-  --chart-3: #5C3D3D;
-  --chart-4: #8B6F6F;
-  --chart-5: #3D2B2B;
+  /* ============================================
+     LUXURY MINIMALIST COLOR PALETTE
+     Edit these colors to change the entire look
+     ============================================ */
   
-  --radius: 0.5rem;
+  /* Primary Colors - Deep Black & White */
+  --primary: #0A0A0A;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #0A0A0A;
+  --sidebar-primary-foreground: #FFFFFF;
   
-  /* Deep Cream Background with Burgundy Text */
-  --background: #FAF8F3;
-  --foreground: #3D2B2B;
+  /* Chart Colors - Gold Accents */
+  --chart-1: #D4AF37;
+  --chart-2: #C9A961;
+  --chart-3: #B8956A;
+  --chart-4: #2A2A2A;
+  --chart-5: #F5F5F0;
+  
+  /* Radius - Minimal Rounding */
+  --radius: 0.25rem;
+  
+  /* Background - Deep Black */
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+  
+  /* Card - White with Subtle Shadow */
   --card: #FFFFFF;
-  --card-foreground: #3D2B2B;
-  --popover: #FFFFFF;
-  --popover-foreground: #3D2B2B;
+  --card-foreground: #0A0A0A;
   
-  /* Soft Rose and Gold Accents */
-  --secondary: #E8D5CC;
-  --secondary-foreground: #3D2B2B;
-  --muted: #D4C4B8;
-  --muted-foreground: #5C3D3D;
+  /* Popover - Ivory Background */
+  --popover: #F5F5F0;
+  --popover-foreground: #0A0A0A;
+  
+  /* Secondary - Charcoal Gray */
+  --secondary: #2A2A2A;
+  --secondary-foreground: #FFFFFF;
+  
+  /* Muted - Soft Gray */
+  --muted: #808080;
+  --muted-foreground: #CCCCCC;
+  
+  /* Accent - Champagne Gold */
   --accent: #D4AF37;
-  --accent-foreground: #3D2B2B;
+  --accent-foreground: #0A0A0A;
   
+  /* Destructive - Refined Red */
   --destructive: #C41E3A;
-  --destructive-foreground: #FAF8F3;
+  --destructive-foreground: #FFFFFF;
   
-  --border: #E8D5CC;
+  /* Border - Subtle Gray */
+  --border: #2A2A2A;
   --input: #FFFFFF;
   --ring: #D4AF37;
   
-  --sidebar: #FAF8F3;
-  --sidebar-foreground: #3D2B2B;
-  --sidebar-accent: #E8D5CC;
-  --sidebar-accent-foreground: #3D2B2B;
-  --sidebar-border: #E8D5CC;
+  /* Sidebar */
+  --sidebar: #0A0A0A;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #0A0A0A;
+  --sidebar-border: #2A2A2A;
   --sidebar-ring: #D4AF37;
 }
 
 .dark {
-  --primary: #E8D5CC;
-  --primary-foreground: #3D2B2B;
+  --primary: #FFFFFF;
+  --primary-foreground: #0A0A0A;
   --sidebar-primary: #D4AF37;
-  --sidebar-primary-foreground: #3D2B2B;
-  --background: #3D2B2B;
-  --foreground: #FAF8F3;
-  --card: #5C3D3D;
-  --card-foreground: #FAF8F3;
-  --popover: #5C3D3D;
-  --popover-foreground: #FAF8F3;
-  --secondary: #8B6F6F;
-  --secondary-foreground: #FAF8F3;
-  --muted: #6B5555;
-  --muted-foreground: #D4C4B8;
+  --sidebar-primary-foreground: #0A0A0A;
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+  --popover: #2A2A2A;
+  --popover-foreground: #FFFFFF;
+  --secondary: #3A3A3A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #808080;
+  --muted-foreground: #CCCCCC;
   --accent: #D4AF37;
-  --accent-foreground: #3D2B2B;
+  --accent-foreground: #0A0A0A;
   --destructive: #E85D75;
-  --destructive-foreground: #3D2B2B;
-  --border: #6B5555;
-  --input: #5C3D3D;
-  --sidebar: #5C3D3D;
-  --sidebar-foreground: #FAF8F3;
-  --sidebar-accent: #8B6F6F;
-  --sidebar-accent-foreground: #FAF8F3;
-  --sidebar-border: #6B5555;
+  --destructive-foreground: #0A0A0A;
+  --border: #3A3A3A;
+  --input: #1A1A1A;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #0A0A0A;
+  --sidebar-border: #3A3A3A;
   --sidebar-ring: #D4AF37;
 }
 
@@ -122,35 +141,46 @@
   }
   
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Lato', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-  }
+  /* ============================================
+     TYPOGRAPHY SYSTEM - EDIT THESE FOR STYLE
+     ============================================ */
   
   h1 {
-    @apply text-5xl font-bold;
-    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    @apply text-5xl md:text-6xl font-bold;
+    font-weight: 800;
     letter-spacing: 0.05em;
+    line-height: 1.2;
   }
   
   h2 {
-    @apply text-3xl;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    @apply text-4xl md:text-5xl;
+    font-weight: 700;
     letter-spacing: 0.03em;
+    line-height: 1.3;
   }
   
   h3 {
-    @apply text-2xl;
+    font-family: 'Playfair Display', serif;
+    @apply text-2xl md:text-3xl;
     font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  
+  h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
   
   p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     @apply text-base leading-relaxed;
     font-weight: 300;
     line-height: 1.8;
@@ -170,10 +200,9 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   * Victorian Romanticism Design: Generous spacing and asymmetric layouts
-   */
+  /* ============================================
+     CONTAINER - RESPONSIVE PADDING
+     ============================================ */
   .container {
     width: 100%;
     margin-left: auto;
@@ -198,61 +227,48 @@
     .container {
       padding-left: 3rem;
       padding-right: 3rem;
-      max-width: 1280px;
+      max-width: 1400px;
     }
   }
+
+  /* ============================================
+     UTILITY CLASSES - EDIT THESE FOR QUICK CHANGES
+     ============================================ */
   
-  /* Romantic Typography Utilities */
-  .serif-display {
-    font-family: 'Cormorant Garamond', serif;
+  .luxury-heading {
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
   
-  .serif-heading {
-    font-family: 'Cormorant Garamond', serif;
+  .luxury-subheading {
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
     letter-spacing: 0.03em;
   }
   
-  .sans-body {
-    font-family: 'Lato', sans-serif;
+  .luxury-body {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     line-height: 1.8;
   }
   
-  /* Romantic Accent Styles */
-  .text-accent-gold {
+  .gold-accent {
     @apply text-accent;
   }
   
-  .border-accent-gold {
+  .gold-border {
     @apply border-accent;
   }
   
-  /* Watercolor Wash Effect */
-  .watercolor-bg {
-    background: linear-gradient(135deg, #FAF8F3 0%, #E8D5CC 50%, #FAF8F3 100%);
-    position: relative;
-  }
+  /* ============================================
+     ANIMATIONS - SMOOTH & REFINED
+     ============================================ */
   
-  /* Vintage Polaroid Frame */
-  .polaroid-frame {
-    @apply bg-white shadow-lg;
-    transform: rotate(-2deg);
-    padding: 0.75rem;
-    border: 1px solid #E8D5CC;
-  }
-  
-  .polaroid-frame:nth-child(even) {
-    transform: rotate(2deg);
-  }
-  
-  /* Gentle Fade-in Animation */
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -260,39 +276,144 @@
     }
   }
   
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
   .fade-in-up {
     animation: fade-in-up 0.8s ease-out forwards;
   }
   
-  /* Gold Accent Underline */
-  .underline-gold {
+  .fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+  
+  .slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+  
+  .slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+  
+  /* ============================================
+     GOLD DIVIDER - LUXURY ACCENT LINE
+     ============================================ */
+  
+  .gold-divider {
+    @apply h-px bg-accent my-12;
+  }
+  
+  .gold-divider-thick {
+    @apply h-0.5 bg-accent my-16;
+  }
+  
+  /* ============================================
+     HOVER EFFECTS - SUBTLE & REFINED
+     ============================================ */
+  
+  .hover-gold-underline {
     position: relative;
     display: inline-block;
   }
   
-  .underline-gold::after {
+  .hover-gold-underline::after {
     content: '';
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: #D4AF37;
-    transition: width 0.3s ease;
+    transition: width 0.4s ease;
   }
   
-  .underline-gold:hover::after {
+  .hover-gold-underline:hover::after {
     width: 100%;
+  }
+  
+  /* ============================================
+     CARD STYLES - MINIMALIST
+     ============================================ */
+  
+  .luxury-card {
+    @apply bg-white p-8 rounded-none shadow-lg;
+    border: 1px solid #E8E8E8;
+    transition: all 0.4s ease;
+  }
+  
+  .luxury-card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-2px);
+  }
+  
+  /* ============================================
+     SECTION PADDING - GENEROUS SPACING
+     ============================================ */
+  
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  
+  .section-padding-lg {
+    @apply py-32 md:py-40;
   }
 }
 
-/* Smooth Scrolling */
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection Color */
 ::selection {
   background-color: #D4AF37;
-  color: #3D2B2B;
+  color: #0A0A0A;
+}
+
+/* Smooth scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A961;
 }
